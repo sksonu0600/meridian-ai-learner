@@ -37,8 +37,25 @@ class Settings(BaseSettings):
     app_mode: Literal["local", "cloud"] = Field("local", validation_alias="APP_MODE")
 
     # --- Gemini (used in BOTH modes for the chat model) ---
+
+# --- LLM provider: Gemini or OpenAI ---
+    llm_provider: Literal["gemini", "openai"] = Field(
+    "gemini", validation_alias="LLM_PROVIDER"
+)
+
     GOOGLE_API_KEY: str = Field("", validation_alias="GOOGLE_API_KEY")
-    llm_model_name: str = Field("gemini-3.8-flash", validation_alias="VERTEX_LLM_MODEL_NAME")
+
+    OPENAI_API_KEY: str = Field("", validation_alias="OPENAI_API_KEY")
+
+    llm_model_name: str = Field(
+        "gemini-3.8-flash", validation_alias="LLM_MODEL_NAME"
+    )
+
+    llm_temperature: float = Field(
+        0.0, validation_alias="LLM_TEMPERATURE"
+    )
+
+    
     # 0 = most repeatable answers. If the model loops or repeats itself, try 1.0 (Gemini 3 default)
     llm_temperature: float = Field(0.0, validation_alias="LLM_TEMPERATURE")
 
