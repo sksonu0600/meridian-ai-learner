@@ -1,0 +1,2 @@
+{"path": "/Users/sonukumar/projects/meridian-ai-learner/frontend/dist", "timestamp": "2026-10-24T05:42:03.625803Z", "level": "warning", "severity": "WARNING", "event": "Frontend dist not found \u2014 frontend will not be served."}
+{"mode": "local", "llm": "gpt-4.1-nano", "timestamp": "2026-10-24T05:42:03.626358Z", "level": "info", "severity": "INFO", "event": "Meridian AI starting"}
